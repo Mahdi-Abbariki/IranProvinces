@@ -1,6 +1,6 @@
 # Iran Provinces
 
-This package provides iran provinces and cities tables It can be configured to :
+This package provides iran provinces and cities tables, and It can be configured to :
 
 - make cities table or not
 - add lat,long to cities table or not

@@ -1,5 +1,5 @@
 {
-    "name": "mahdiabbariki/iran_provinces",
+    "name": "mahdiabbariki/iranprovinces",
     "description": "This package will create model, migration and seeder for provinces and it's cities to the project.",
     "authors": [
         {

@@ -1,0 +1,27 @@
+{
+    "name": "mahdiabbariki/iran_provinces",
+    "description": "This package will create model, migration and seeder for provinces and it's cities to the project.",
+    "authors": [
+        {
+            "name": "Mahdi Abbariki",
+            "email": "info@mahdiab.ir"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "src"
+        ],
+        "psr-4": {
+            "MahdiAbbariki\\IranProvinces\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MahdiAbbariki\\IranProvinces\\IranProvincesServiceProvider"
+            ]
+        }
+    }
+}

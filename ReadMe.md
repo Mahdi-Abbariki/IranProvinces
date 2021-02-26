@@ -26,7 +26,7 @@ run:
 
 For Laravel < v6
 
-add to config/app.php
+append the following line to `providers` array in ```config/app.php``` file
 
 ```php
 'providers' => [

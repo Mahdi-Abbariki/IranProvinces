@@ -1,6 +1,6 @@
 {
     "name": "mahdiabbariki/iranprovinces",
-    "description": "This package will create model, migration and seeder for provinces and it's cities to the project.",
+    "description": "This package will add Models, Tables for provinces and it's cities to your project.",
     "authors": [
         {
             "name": "Mahdi Abbariki",
@@ -8,7 +8,17 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "laravel/laravel": "^v5.0.0",
+        "nesbot/carbon": "*"
+    },
+    "keywords": [
+        "province",
+        "city",
+        "iran",
+        "location"
+    ],
+    "license": "MIT",
     "autoload": {
         "classmap": [
             "src"

@@ -16,7 +16,7 @@ This package provides iran provinces and cities tables, and It can be configured
 
 </div>
 
-## installation
+## Installation
 
 run:
 
@@ -40,16 +40,16 @@ The package is successfully added to your project.
 
 run:
 
-```php
+```shell
     php artisan province:config
 ```
 
-This will publish the configuration file, edit this file based on your requirements, the default configuration suits
+This will publish the configuration file, edit this file based on your requirements. the default configuration suits
 most users.
 
 After editing configuration file, run:
 
-```php
+```shell
     php artisan province:database 
 ```
 
@@ -61,3 +61,7 @@ Examples:
     $province = IranProvinces::find(1);
     $cities = $province->cities;
 ```
+
+## Contribution
+
+send any **Bug** reports to [info@mahdiab.ir](mailto:info@mahdiab.ir)

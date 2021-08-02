@@ -9,7 +9,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "laravel/laravel": "^v5.0.0",
+        "laravel/framework": ">=5.0",
         "nesbot/carbon": "*"
     },
     "keywords": [

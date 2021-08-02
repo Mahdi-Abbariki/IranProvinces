@@ -33,7 +33,7 @@ class DatabaseMigrationAndSeeder extends Command
 
 
             if (config('iran_provinces.cities')) {
-                if (Schema::hasTable(config('iran_provinces.provinces_table_name'))) {
+                if (Schema::hasTable(config('iran_provinces.cities_table_name'))) {
                     $this->comment('table for cities is existed.');
                 } else {
                     $this->callSilent('migrate', [

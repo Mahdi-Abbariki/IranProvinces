@@ -62,8 +62,8 @@
 ```php
     $this->call([
         //...
-        IranProvincesTableSeeder::class,
-        IranProvincesCitiesTableSeeder::class,
+        \MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesTableSeeder::class,
+        \MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesCitiesTableSeeder::class,
         //...
     ]);
 ```

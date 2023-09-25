@@ -6,8 +6,8 @@ return [
      * you can change them if you wish
      * the desired data should be a string
      */
-    "provinces_table_name" => "iran_provinces",
-    "cities_table_name" => "iran_cities",
+    "provinces_table_name" => "provinces",
+    "cities_table_name" => "cities",
 
 
     /**

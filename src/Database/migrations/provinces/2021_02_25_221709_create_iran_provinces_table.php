@@ -16,14 +16,14 @@ class CreateIranProvincesTable extends Migration
         Schema::create($this->getTableName(), function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            if (config('iran_provinces.timestamps'))
+            if (config('iranProvinces.timestamps'))
                 $table->timestamps();
         });
     }
 
     public function getTableName(): string
     {
-        return config('iran_provinces.provinces_table_name');
+        return config('iranProvinces.provinces_table_name');
     }
 
     /**

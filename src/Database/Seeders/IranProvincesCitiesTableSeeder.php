@@ -20,14 +20,14 @@ class IranProvincesCitiesTableSeeder extends Seeder
                 "province_id" => $city["province_id"],
                 "name" => $city["name"]
             ];
-            if ((bool)config('iran_provinces.cities_lat_long')) {
+            if ((bool)config('iranProvinces.cities_lat_long')) {
                 $array["latitude"] = (float)$city["latitude"];
                 $array["longitude"] = (float)$city["longitude"];
             }
-            if (config('iran_provinces.timestamps'))
+            if (config('iranProvinces.timestamps'))
                 $array["created_at"] = $array["updated_at"] = Carbon::now();
 
-            DB::table(config('iran_provinces.cities_table_name'))->insert($array);
+            DB::table(config('iranProvinces.cities_table_name'))->insert($array);
         }
     }
 

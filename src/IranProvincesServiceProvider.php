@@ -3,8 +3,6 @@
 namespace MahdiAbbariki\IranProvinces;
 
 use Illuminate\Support\ServiceProvider;
-use MahdiAbbariki\IranProvinces\Console\CreateConfigFile;
-use MahdiAbbariki\IranProvinces\Console\DatabaseMigrationAndSeeder;
 use MahdiAbbariki\IranProvinces\Console\IranProvincesSeeder;
 
 class IranProvincesServiceProvider extends ServiceProvider
@@ -23,9 +21,9 @@ class IranProvincesServiceProvider extends ServiceProvider
                 __DIR__ . '/Database/Seeders' => database_path('seeders'),
             ], 'iran-provinces-db-structure');
         }
-        $this->mergeConfigFrom(__DIR__ . '/Config/Iran_provinces.php', 'iran_provinces');
+        $this->mergeConfigFrom(__DIR__ . '/Config/IranProvinces.php', 'iranProvinces');
         $this->publishes([
-            __DIR__ . '/Config/Iran_provinces.php' => config_path('iranProvinces.php'),
+            __DIR__ . '/Config/IranProvinces.php' => config_path('iranProvinces.php'),
         ], "config");
     }
 
@@ -38,8 +36,6 @@ class IranProvincesServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                CreateConfigFile::class,
-                DatabaseMigrationAndSeeder::class,
                 IranProvincesSeeder::class,
             ]);
         }

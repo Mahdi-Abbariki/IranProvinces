@@ -68,8 +68,8 @@ Alternatively, you can add the following lines to the `run` method in the `Datab
 ```php
     $this->call([
         //...
-        IranProvincesTableSeeder::class,
-        IranProvincesCitiesTableSeeder::class,
+        \MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesTableSeeder::class,
+        \MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesCitiesTableSeeder::class,
         //...
     ]);
 ```

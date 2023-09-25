@@ -20,9 +20,9 @@ class IranProvincesTableSeeder extends Seeder
                 "id" => $id,
                 "name" => $province
             ];
-            if (config('iran_provinces.timestamps'))
+            if (config('iranProvinces.timestamps'))
                 $array["created_at"] = $array["updated_at"] = Carbon::now();
-            DB::table(config('iran_provinces.provinces_table_name'))->insert($array);
+            DB::table(config('iranProvinces.provinces_table_name'))->insert($array);
         }
     }
 

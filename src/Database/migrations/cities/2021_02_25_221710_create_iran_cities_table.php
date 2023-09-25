@@ -17,18 +17,18 @@ class CreateIranCitiesTable extends Migration
             $table->id();
             $table->unsignedBigInteger("province_id");
             $table->string('name');
-            if (config('iran_provinces.cities_lat_long')) {
+            if (config('iranProvinces.cities_lat_long')) {
                 $table->decimal("latitude", 10, 8)->nullable();
                 $table->decimal("longitude", 10, 8)->nullable();
             }
-            if (config('iran_provinces.timestamps'))
+            if (config('iranProvinces.timestamps'))
                 $table->timestamps();
         });
     }
 
     public function getTableName(): string
     {
-        return config('iran_provinces.cities_table_name');
+        return config('iranProvinces.cities_table_name');
     }
 
     /**

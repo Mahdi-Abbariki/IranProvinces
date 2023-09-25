@@ -12,7 +12,7 @@ class City extends Model
 
     public function getTable()
     {
-        return config('iran_provinces.cities_table_name');
+        return config('iranProvinces.cities_table_name');
     }
 
     public function province(): Relation

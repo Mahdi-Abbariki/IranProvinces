@@ -14,9 +14,9 @@ class AddForeignIranCitiesTable extends Migration
     public function up()
     {
 
-        if (config('iran_provinces.cities')) {
+        if (config('iranProvinces.cities')) {
             Schema::table($this->getTableName(), function (Blueprint $table) {
-                $table->foreign('province_id')->references('id')->on(config('iran_provinces.provinces_table_name'));
+                $table->foreign('province_id')->references('id')->on(config('iranProvinces.provinces_table_name'));
             });
         }
 
@@ -24,7 +24,7 @@ class AddForeignIranCitiesTable extends Migration
 
     public function getTableName(): string
     {
-        return config('iran_provinces.cities_table_name');
+        return config('iranProvinces.cities_table_name');
     }
 
     /**

@@ -12,12 +12,12 @@ class Province extends Model
 
     public function getTable()
     {
-        return config('iran_provinces.provinces_table_name');
+        return config('iranProvinces.provinces_table_name');
     }
 
     public function cities(): ?Relation
     {
-        if ((bool)config('iran_provinces.cities'))
+        if ((bool)config('iranProvinces.cities'))
             return $this->hasMany(City::class, "province_id", "id");
         else
             return null;

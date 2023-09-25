@@ -4,8 +4,8 @@ namespace MahdiAbbariki\IranProvinces\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Schema;
-use IranProvinces\models\IranCities;
-use IranProvinces\models\IranProvinces;
+use MahdiAbbariki\IranProvinces\Models\City;
+use MahdiAbbariki\IranProvinces\Models\Province;
 
 class IranProvincesSeeder extends Command
 {
@@ -15,25 +15,20 @@ class IranProvincesSeeder extends Command
 
     public function handle()
     {
-        if (!file_exists(config_path('iran_provinces.php')))
-            $this->error('configuration file has not been published run <province:config>');
-        else {
-            if (Schema::hasTable(config('iran_provinces.provinces_table_name')) && !IranProvinces::count()) // check if the table is present and empty
+            if (Schema::hasTable(config('iranProvinces.provinces_table_name')) && !Province::count()) // check if the table is present and empty
                 $this->callSilent('db:seed', [
                     '--class' => 'MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesTableSeeder',
                     '--force' => true
                 ]);
 
 
-            if (config('iran_provinces.cities'))
-                if (Schema::hasTable(config('iran_provinces.cities_table_name')) && !IranCities::count())// check if the table is present and empty
+            if (config('iranProvinces.cities'))
+                if (Schema::hasTable(config('iranProvinces.cities_table_name')) && !City::count())// check if the table is present and empty
                     $this->callSilent('db:seed', [
                         '--class' => 'MahdiAbbariki\IranProvinces\Database\Seeders\IranProvincesCitiesTableSeeder',
                         '--force' => true
                     ]);
             $this->info('Successful. enjoy developing :)');
-        }
-
 
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace MahdiAbbariki\IranProvinces\models;
+namespace MahdiAbbariki\IranProvinces\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
-class IranProvinces extends Model
+class Province extends Model
 {
     use HasFactory;
 
@@ -18,7 +18,7 @@ class IranProvinces extends Model
     public function cities(): ?Relation
     {
         if ((bool)config('iran_provinces.cities'))
-            return $this->hasMany(IranCities::class, "province_id", "id");
+            return $this->hasMany(City::class, "province_id", "id");
         else
             return null;
     }
